@@ -1,0 +1,26 @@
+stworzyć canvas
+stworzyć obraz w canvasie
+
+stworzyć GameManager i stworzyć funkcje gameover
+
+public class GameMaager : MonoBehaviour {
+public GameObject gameOverCanvas;
+
+private void Start()
+{
+	Time.timeScale = 1;
+}
+
+public void GameOver()
+{
+	gameOverCanvas.SetActive(true);
+	Time.timescale = 0;
+}
+
+w kodzie ptaka dodajemy
+public GameManager gameManager;
+
+private void OnCollisionEnter2D(Collision2D collision)
+{
+	gameManager.GameOver():
+}
